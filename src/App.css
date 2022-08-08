@@ -1,7 +1,14 @@
-.App {
-  text-align: center;
+.textbox {
+  position: absolute;
+  top: 33em;
+  left: 50em;
 }
 
+.but{
+  position: absolute;
+  top: 36em;
+  left: 60em;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +42,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.backgroundImg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+
+
 }
