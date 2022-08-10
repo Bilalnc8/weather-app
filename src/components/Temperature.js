@@ -23,6 +23,7 @@ const Temperature = () => {
     //await(response)
 .then(response => {
   setTemp(response.data.currentConditions.temp);
+  console.log(response)
   return(
     {temp}
   )
@@ -68,3 +69,5 @@ const Temperature = () => {
 
 
 export default Temperature
+
+// usestate and do  doc.days
