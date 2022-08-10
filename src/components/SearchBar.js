@@ -15,7 +15,7 @@ const SearchBar = () => {
   }
 
   return (
-    <div>
+    <div className='searchBar'>
     <form>
     <input type="text" value={searchText} onChange={SearchBarChange} placeholder="Enter text"/>
     
