@@ -81,20 +81,37 @@ const Temperature = () => {
     }}> change units</button>
     <button> Click me </button>
 
-   {numbers}
-    
-   
+ 
+
     {maxTemp.map((maxi, index) => {
 
-      numbers.push(maxi.tempmin)
+      numbers.push(maxi.tempmin + " ")
+      
       
       return(
-        <div key={index}>
-       <p> {maxi.tempmin} </p>
-       <p>{maxTemp[2].tempmax} {maxTemp[3].tempmax}</p>
-        </div>
+        <p key={index}>
+        </p>
        )
     })}
+
+    <div className='grid-container'>
+      <div className="grid-item"> {numbers[0]} </div>
+      <div className="grid-item"> {numbers[1]} </div>
+      <div className="grid-item"> {numbers[2]} </div>
+      <div className="grid-item"> {numbers[3]} </div>
+      <div className="grid-item"> {numbers[4]} </div>
+      <div className="grid-item"> {numbers[5]} </div>
+      <div className="grid-item"> {numbers[6]} </div>
+      <div className="grid-item"> {numbers[7]} </div>
+      <div className="grid-item"> {numbers[8]} </div>
+      <div className="grid-item"> {numbers[9]}</div>
+      <div className="grid-item"> {numbers[10]}</div>
+      <div className="grid-item"> {numbers[11]}</div>
+      <div className="grid-item"> {numbers[12]}</div>
+      <div className="grid-item"> {numbers[13]}</div>
+      <div className="grid-item"> {numbers[14]}</div>
+ 
+    </div>
 
     
     </div>
