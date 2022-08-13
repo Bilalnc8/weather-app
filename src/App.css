@@ -38,3 +38,13 @@
   font-size: 30px;
   text-align: center;
 }
+
+.tabb {
+  border: 5px solid red;
+  border-width: solid;
+  background-color: aquamarine;
+}
+
+table {
+  background-color: grey;
+}

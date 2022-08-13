@@ -1,6 +1,8 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useTable } from 'react';
 import axios from 'axios';
+
+
 
 const Temperature = () => {
 
@@ -59,6 +61,8 @@ const Temperature = () => {
     }
 
     console.log(maxTemp)
+
+  
        
 // send units as a promt when calling func in both buttons
   return (
@@ -86,6 +90,9 @@ const Temperature = () => {
     {maxTemp.map((maxi, index) => {
 
       numbers.push(maxi.tempmin + " ")
+      return(
+        maxi.tempmin
+      )
       
       
       return(
@@ -94,26 +101,26 @@ const Temperature = () => {
        )
     })}
 
-    <div className='grid-container'>
-      <div className="grid-item"> {numbers[0]} </div>
-      <div className="grid-item"> {numbers[1]} </div>
-      <div className="grid-item"> {numbers[2]} </div>
-      <div className="grid-item"> {numbers[3]} </div>
-      <div className="grid-item"> {numbers[4]} </div>
-      <div className="grid-item"> {numbers[5]} </div>
-      <div className="grid-item"> {numbers[6]} </div>
-      <div className="grid-item"> {numbers[7]} </div>
-      <div className="grid-item"> {numbers[8]} </div>
-      <div className="grid-item"> {numbers[9]}</div>
-      <div className="grid-item"> {numbers[10]}</div>
-      <div className="grid-item"> {numbers[11]}</div>
-      <div className="grid-item"> {numbers[12]}</div>
-      <div className="grid-item"> {numbers[13]}</div>
-      <div className="grid-item"> {numbers[14]}</div>
- 
-    </div>
+    <table>
 
-    
+      <thead>
+        <tr> Temps</tr>
+      </thead>
+        <tbody>
+          <tr className='tabb'>        
+          {maxTemp.map((maxi, index) => {         
+            return(
+              <td>{maxi.tempmin}</td>    
+            )
+          })}
+          </tr>
+          
+          
+        </tbody>
+        </table>
+
+        
+
     </div>
   )
 }
