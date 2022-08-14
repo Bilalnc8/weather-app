@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect, useTable } from 'react';
 import axios from 'axios';
+import BookMarks from './BookMarks';
 
 
 
@@ -11,6 +12,7 @@ const Temperature = ({city, setReady, ready}) => {
     const [units, setUnits] = useState("metric")
     const [maxTemp, setMaxTemp] = useState([])
     const [bookMarks, setBookMarks] = useState([])
+    const [openBookMarks, setOpenBookMarks] = useState(false)
 
     
   
@@ -65,12 +67,15 @@ const Temperature = ({city, setReady, ready}) => {
     
     
 
-    const BookMark= () => {
+    const SettingBookMark= () => {
       bookMarks.push(city)
       console.log(bookMarks)
     }
 
-
+    const BookMarkModel = () => { // create custom hook to add useEffect  
+        setOpenBookMarks(true)
+        console.log(openBookMarks)
+    }
   
        
 // send units as a promt when calling func in both buttons
@@ -93,7 +98,7 @@ const Temperature = ({city, setReady, ready}) => {
         
     }}> change units</button>
     <button> Click me </button>
-    <button onClick={BookMark}> Add city to bookmarks </button>
+    <button onClick={SettingBookMark}> Add city to bookmarks </button>
 
  
 
@@ -129,7 +134,9 @@ const Temperature = ({city, setReady, ready}) => {
         </tbody>
         </table>
 
-        
+        <button onClick={BookMarkModel}> BookMarks </button>
+
+        <BookMarks open={openBookMarks} bookMarks={bookMarks}/>
 
     </div>
   )
