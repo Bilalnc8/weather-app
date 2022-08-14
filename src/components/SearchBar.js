@@ -16,6 +16,7 @@ const SearchBar = () => {
   const ChangeCity = () => {
     setCity(searchText)
     setReady(true)
+    console.log("clicked")
   }
   console.log(searchText)
 

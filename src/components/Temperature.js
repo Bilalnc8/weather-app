@@ -10,7 +10,7 @@ const Temperature = ({city, setReady, ready}) => {
     const [celcius, setCelcius] = useState(true)
     const [units, setUnits] = useState("metric")
     const [maxTemp, setMaxTemp] = useState([])
-    const [rand, setRand] = useState("1")
+  
 
     let apii = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/"+city+"?unitGroup="+units+"&key=749R9FJ3RFFDYNZ4QM3W54QZJ&contentType=json"
 
@@ -49,8 +49,7 @@ const Temperature = ({city, setReady, ready}) => {
       }))
       
     return(
-      {temp}
-      
+      {temp}      
 
     )
   // console.log(celcius + "respobse")
