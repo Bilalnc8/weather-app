@@ -65,21 +65,7 @@ const Temperature = ({city, setReady, ready}) => {
     const TempMount = () => {
          <h1> hello </h1>;
     }
-/*
-    const gett = () => {
 
-      axios.get(apii)
-      //await(response)
-    .then(response => {
-      setRand(response.data.currentConditions.temp);
-      console.log(response.data.currentConditions.temp)
-    })
-  
-    return(
-      {rand}
-    )
-  }
- */
 
   
        
@@ -103,6 +89,7 @@ const Temperature = ({city, setReady, ready}) => {
         
     }}> change units</button>
     <button> Click me </button>
+    <button> Add city to bookmarks </button>
 
  
 
@@ -147,13 +134,3 @@ const Temperature = ({city, setReady, ready}) => {
 
 export default Temperature
 
-// usestate and do  doc.days
-
-/* 
-   {maxTemp.map((maxi) => {
-
-      return(
-       <p> {maxi.tempmin} </p>
-      )
-    })}
-*/
