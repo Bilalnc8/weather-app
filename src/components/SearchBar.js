@@ -1,18 +1,23 @@
 import React from 'react'
 import { useState } from 'react'
+import Temperature from './Temperature'
 
 const SearchBar = () => {
 
   const [searchText, setSearchText] = useState("")
   const [bodypara, setBodyPara] = useState("")
+  const [city, setCity] = useState("toronto")
+  const [ready, setReady] = useState(false)
 
   const SearchBarChange = (event) => {
     setSearchText(event.target.value)
 }
 
-  const ChangeBodyPara = (searchText) => {
-    setBodyPara(searchText)
+  const ChangeCity = () => {
+    setCity(searchText)
+    setReady(true)
   }
+  console.log(searchText)
 
   return (
     <div className='searchBar'>
@@ -20,8 +25,10 @@ const SearchBar = () => {
     <input type="text" value={searchText} onChange={SearchBarChange} placeholder="Enter text"/>
     
     </form>
-    <button onClick={ChangeBodyPara}> enter </button>
+    <button onClick={ChangeCity}> enter </button>
+    <Temperature city={city} setReady={setReady} ready={ready}/>
     </div>
+    
   )
 }
 

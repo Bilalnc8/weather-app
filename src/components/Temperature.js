@@ -4,15 +4,19 @@ import axios from 'axios';
 
 
 
-const Temperature = () => {
+const Temperature = ({city, setReady, ready}) => {
 
     const [temp, setTemp] = useState()
     const [celcius, setCelcius] = useState(true)
     const [units, setUnits] = useState("metric")
     const [maxTemp, setMaxTemp] = useState([])
+    const [rand, setRand] = useState("1")
+
+    let apii = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/"+city+"?unitGroup="+units+"&key=749R9FJ3RFFDYNZ4QM3W54QZJ&contentType=json"
 
     const numbers = []
 
+    console.log(city)
 
     // use effect
     useEffect(()=>{
@@ -22,45 +26,61 @@ const Temperature = () => {
     if (!celcius)
         setUnits("us");
     
-    let apii = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/toronto?unitGroup="+units+"&key=749R9FJ3RFFDYNZ4QM3W54QZJ&contentType=json"
     
-    axios.get(apii)
-    //await(response)
-.then(response => {
-  setTemp(response.data.currentConditions.temp);
-  
- // console.log(response.data.days)
+    
+    console.log(apii)
+    
+      axios.get(apii)
+      //await(response)
+  .then(response => {
+    setTemp(response.data.currentConditions.temp);
+    console.log(response.data.currentConditions.temp)
+    
+    
+  // console.log(response.data.days)
 
-  //setMaxTemp(1)
-
-  setMaxTemp(response.data.days.map(day => 
-    {
+    //setMaxTemp(1)
+    //setReady(false)
+    setMaxTemp(response.data.days.map(day => 
+      {
+        
+        return day
+        
+      }))
       
-      return day
+    return(
+      {temp}
       
-    }))
-    
-    
-  return(
-    {temp}
-    
 
-  )
- // console.log(celcius + "respobse")
-})
-.catch(err => {
-  console.error(err);
-});
+    )
+  // console.log(celcius + "respobse")
+  })
+  .catch(err => {
+    console.error(err);
+  });
     
-    }, [celcius, units])
+    }, [celcius, units, city])
     
     
 
     const TempMount = () => {
          <h1> hello </h1>;
     }
+/*
+    const gett = () => {
 
-    console.log(maxTemp)
+      axios.get(apii)
+      //await(response)
+    .then(response => {
+      setRand(response.data.currentConditions.temp);
+      console.log(response.data.currentConditions.temp)
+    })
+  
+    return(
+      {rand}
+    )
+  }
+ */
 
   
        
@@ -100,10 +120,10 @@ const Temperature = () => {
         </p>
        )
     })}
-
+    
     <table>
 
-      <thead>
+      <thead >
         <tr> Temps</tr>
       </thead>
         <tbody>
