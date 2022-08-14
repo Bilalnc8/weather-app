@@ -10,6 +10,9 @@ const Temperature = ({city, setReady, ready}) => {
     const [celcius, setCelcius] = useState(true)
     const [units, setUnits] = useState("metric")
     const [maxTemp, setMaxTemp] = useState([])
+    const [bookMarks, setBookMarks] = useState([])
+
+    
   
 
     let apii = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/"+city+"?unitGroup="+units+"&key=749R9FJ3RFFDYNZ4QM3W54QZJ&contentType=json"
@@ -62,8 +65,9 @@ const Temperature = ({city, setReady, ready}) => {
     
     
 
-    const TempMount = () => {
-         <h1> hello </h1>;
+    const BookMark= () => {
+      bookMarks.push(city)
+      console.log(bookMarks)
     }
 
 
@@ -89,7 +93,7 @@ const Temperature = ({city, setReady, ready}) => {
         
     }}> change units</button>
     <button> Click me </button>
-    <button> Add city to bookmarks </button>
+    <button onClick={BookMark}> Add city to bookmarks </button>
 
  
 
