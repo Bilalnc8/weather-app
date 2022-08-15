@@ -5,12 +5,18 @@ const BookMarks = ({open, bookMarks}) => {
 
   return (
     <div>
+    <div className='BookMarks'>
+    <i className="ri-menu-line"></i>
+    </div>
     {bookMarks.map((cities, index) => { 
         return(
-        <h1>{cities}</h1>
+            <li className='BookMarkContents'>    
+         {cities}
+          </li>
         )
     
     })}
+    
     </div>
   )
 }

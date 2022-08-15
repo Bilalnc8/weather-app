@@ -48,3 +48,29 @@
 table {
   background-color: grey;
 }
+
+.BookMarks {
+  position: relative;
+  bottom: 790px;
+  right: 1600px;
+  background-color: #222f3e;
+  color: white;
+  gap: 1rem; 
+  align-items: center;
+  padding: 1rem;
+  
+}
+
+.BookMarkContents{
+  position: relative;
+  background-color: #222f3e;
+  color: white;
+  bottom: 791px;
+  right: 1000px;
+  height: 200px;
+  width: 280px;
+}
+li {
+  list-style: none;
+  padding: 1rem 2rem;
+}
