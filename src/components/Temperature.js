@@ -73,7 +73,7 @@ const Temperature = ({city, setReady, ready}) => {
     }
 
     const BookMarkModel = () => { // create custom hook to add useEffect  
-        setOpenBookMarks(true)
+        setOpenBookMarks(!openBookMarks)
         console.log(openBookMarks)
     }
   
