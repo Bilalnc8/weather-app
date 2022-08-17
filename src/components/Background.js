@@ -5,6 +5,7 @@ const Background = () => {
   return (
     <div>
     <img className="backgroundImg" src= "/waterfall.jpg" alt="Waterfall image"/>
+    
     </div>
   )
 }
