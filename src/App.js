@@ -42,26 +42,17 @@ axios.request(options).then(function (response) {
     <div className="App">
      
   
-
+    <div className='result'>
   {images.map((pics, index) => {
 
-    final.push(pics.primaryImage.url)
-    
-  
+    final.push(pics.primaryImage.url) 
 
     return(
-      <span>
-      <img className='finnally' src={pics.primaryImage.url} />
-      <span></span> 
-      </span>
+      <img  src={pics.primaryImage.url} />
     )
-    
-    
-    return(
-      <p key={index}>
-      </p>
-     )
+  
   })}
+  </div>
      
     </div>
   );

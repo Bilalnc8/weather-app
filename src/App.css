@@ -1,95 +1,33 @@
-.App {
-  background-color: black;
+
+
+*{
+  margin:0;
+  padding: 0;
+  
 }
-span {
-  padding-right: 50px;
+.app{
+  min-height: 100vh;
+  max-height: auto;
+  background-color: #1e1e1e;
+  overflow-x: auto;
 }
 
-.textbox {
-  position: absolute;
-  top: 33em;
-  left: 50em;
-}
-.finnally {
-  display: inline;
-  color: aqua;
-  max-width: 500px;
-  max-height: 500px;
-  background-color: rgb(151, 17, 17);
-}
 
-.but{
-  position: absolute;
-  top: 36em;
-  left: 60em;
-}
-.backgroundImg {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-}
-
-.searchBar {
-  position: absolute;
-  top: 1em;
-  left: 40em;
-}
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto auto;
-  background-color: #2196F3;
-  padding: 10px;
-  color: rgb(41, 33, 158);
-}
-
-.grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
-}
-
-.tabb {
-  border: 5px solid red;
-  border-width: solid;
-  background-color: aquamarine;
-}
-
-table {
-  background-color: grey;
-}
-
-.BookMarks {
-  position: relative;
-  bottom: 790px;
-  right: 1600px;
-  background-color: #222f3e;
-  color: white;
-  gap: 1rem; 
+.result{
+  min-height: 100%;
+  max-height: auto;
+  background-color: #272c34;
+  margin-top:1rem ;
+  display: inline-flex;
   align-items: center;
-  padding: 1rem;
+  justify-content: left; 
   
 }
 
-.BookMarkContents{
-  position: relative;
-  background-color: #222f3e;
-  color: white;
-  bottom: 791px;
-  right: 1000px;
-  height: 200px;
-  width: 280px;
-}
-li {
-  list-style: none;
-  padding: 1rem 2rem;
-}
-
-image {
-  max-width: 500px;
-  max-height: 500px;
+img{
+  width: 1620px;
+  height: 180px;
+  object-fit: cover;
+  padding: 0.75rem;
+  
 }
