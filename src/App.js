@@ -53,7 +53,17 @@ axios.request(options).then(function (response) {
   
   })}
   </div>
-     
+  <div>
+  {images.map((pics, index) => {
+
+    final.push(pics.primaryImage.url) 
+
+    return(
+      <img className='Pictures' src={pics.primaryImage.url} />
+    )
+  
+  })}
+  </div>
     </div>
   );
 }
