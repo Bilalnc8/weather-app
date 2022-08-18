@@ -9,18 +9,23 @@
   min-height: 100vh;
   max-height: auto;
   background-color: #1e1e1e;
-  overflow-x: auto;
+  width: 100%;
+  
 }
 
-
+ 
 .result{
-  min-height: 100%;
-  max-height: auto;
-  background-color: #272c34;
-  margin-top:1rem ;
-  display: inline-flex;
-  align-items: center;
-  justify-content: left; 
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 21%;
+  gap: 680px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+
+  
+}
+
+.pictures{
   
 }
 
