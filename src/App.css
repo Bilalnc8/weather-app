@@ -18,16 +18,15 @@
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 21%;
-  gap: 680px;
+  gap: 880px;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
+  color: beige;
 
   
 }
 
-.pictures{
-  
-}
+
 
 img{
   width: 1620px;

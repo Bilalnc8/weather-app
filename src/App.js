@@ -16,6 +16,11 @@ function App() {
 
   const axios = require("axios");
 
+  console.log("hi")
+  console.log("hi")
+  console.log("hi")
+  console.log("hi")
+
   const options = {
     method: 'GET',
     url: 'https://moviesdatabase.p.rapidapi.com/titles',
