@@ -23,7 +23,11 @@
   overscroll-behavior-inline: contain;
   color: beige;
 
-  
+}
+
+.icons{
+  padding: 40px 25px 40px 25px;
+  border: 5px solid red;
 }
 
 

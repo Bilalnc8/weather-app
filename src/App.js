@@ -61,7 +61,7 @@ axios.request(options).then(function (response) {
   return (
     <div className="App">
      
-  <MdChevronLeft size={40} onClick={moveLeft}/> 
+  <MdChevronLeft size={40} onClick={moveLeft} className='icons'/> 
   <div  id='slider' className='result'>
     {images.map((pics, index) => {
 
