@@ -3,7 +3,7 @@
 *{
   margin:0;
   padding: 0;
-  
+  background-color: black;
 }
 .app{
   min-height: 100vh;
@@ -17,12 +17,17 @@
 .result{
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 21%;
-  gap: 880px;
-  overflow-x: auto;
+  grid-auto-columns: 14%;
+  gap: 10px;
   overscroll-behavior-inline: contain;
   color: beige;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  
 
+}
+
+.result:-webkit-scrollbar {
+  display: none;
 }
 
 .icons{
@@ -35,12 +40,6 @@
   background-color: grey;
 }
 
-
-
-img{
-  width: 1620px;
-  height: 180px;
-  object-fit: cover;
-  padding: 0.75rem;
-  
+button {
+  color: pink;
 }

@@ -16,36 +16,31 @@ function App() {
 
   const [images, setImages] = useState([])
   const [final, setFinal] = useState([])
+  const url = 'https://image.tmdb.org/t/p/w200'
 
-  const axios = require("axios");
 
   console.log("hi")
   console.log("hi")
   console.log("hi")
   console.log("hi")
 
-  const options = {
-    method: 'GET',
-    url: 'https://moviesdatabase.p.rapidapi.com/titles',
-    params: {limit: '5', page: '1', titleType: 'movie', year: '2018'},
-    headers: {
-      'X-RapidAPI-Key': 'fbf71dc3b0msh7613c82de9c9067p1c24a9jsn5b47ee5b5374',
-      'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
-    }
-  };
-
-axios.request(options).then(function (response) {
-  setImages(response.data.results.map(movieImage =>{
-    return(movieImage)
-
-  }))
-	
- 
+  
+axios.get("https://api.themoviedb.org/3/movie/popular?api_key=204359bfca7315f436f5a955973dc3b0&language=en-US&page=1")
+      //await(response)
+  .then(response => {
+    console.log(response.data)
+    setImages(response.data.results.map(movieImage =>{
+      return(movieImage)
+  
+    }))
+    
+    
+  })
+  .catch(err => {
+    console.error(err);
+  });
 
 
-}).catch(function (error) {
-	console.error(error);
-});
 
   const moveRight = () => {
     let slider = document.getElementById('slider')
@@ -63,12 +58,13 @@ axios.request(options).then(function (response) {
      
   <MdChevronLeft size={40} onClick={moveLeft} className='icons'/> 
   <div  id='slider' className='result'>
-    {images.map((pics, index) => {
+   
+  {images.map((pics, index) => {
 
-      final.push(pics.primaryImage.url) 
-
+      final.push(pics.poster_path) 
+      console.log(pics.poster_path)
       return(
-        <img  src={pics.primaryImage.url} />
+        <img  src={`${url}${pics.poster_path}`} />
       )
     
     })}
@@ -76,6 +72,8 @@ axios.request(options).then(function (response) {
   <button onClick={moveRight}> right </button>
   <iOutlineArrowLeft size={40} onClick={moveLeft}/> 
   <div>
+
+  <img  src='https://image.tmdb.org/t/p/w200/8cXbitsS6dWQ5gfMTZdorpAAzEH.jpg' />
 
   </div>
     </div>
