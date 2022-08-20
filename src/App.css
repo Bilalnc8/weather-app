@@ -26,8 +26,13 @@
 }
 
 .icons{
-  padding: 40px 25px 40px 25px;
+  padding: 40px 20px 40px 20px;
   border: 5px solid red;
+  background-color: blue;
+}
+
+.icons:hover {
+  background-color: grey;
 }
 
 
