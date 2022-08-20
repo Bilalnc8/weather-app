@@ -52,7 +52,7 @@ const Temperature = ({city, setReady, ready}) => {
         return day
         
       }))
-      
+       
     return(
       {temp}      
 

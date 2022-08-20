@@ -56,7 +56,7 @@ axios.get("https://api.themoviedb.org/3/movie/popular?api_key=204359bfca7315f436
   return (
     <div className="App">
      
-  <MdChevronLeft size={40} onClick={moveLeft} className='icons'/> 
+  <MdChevronLeft size={40} onClick={moveLeft} className='leftButton'/> 
   <div  id='slider' className='result'>
    
   {images.map((pics, index) => {
