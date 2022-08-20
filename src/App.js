@@ -4,6 +4,9 @@ import SearchBar from './components/SearchBar';
 import 'remixicon/fonts/remixicon.css'
 import axios from 'axios';
 import { useState, useEffect, useTable } from 'react';
+import {AiFillCaretLeft} from "react-icons/ai";
+import {MdChevronLeft} from "react-icons/md"; 
+
 
 
 
@@ -43,31 +46,37 @@ axios.request(options).then(function (response) {
 }).catch(function (error) {
 	console.error(error);
 });
+
+  const moveRight = () => {
+    let slider = document.getElementById('slider')
+    slider.scrollLeft = slider.scrollLeft + 500
+  }
+
+  const moveLeft = () => {
+    let slider = document.getElementById('slider')
+    slider.scrollLeft = slider.scrollLeft - 500
+  }
+
+
   return (
     <div className="App">
      
-  
-    <div className='result'>
-  {images.map((pics, index) => {
+  <MdChevronLeft size={40} onClick={moveLeft}/> 
+  <div  id='slider' className='result'>
+    {images.map((pics, index) => {
 
-    final.push(pics.primaryImage.url) 
+      final.push(pics.primaryImage.url) 
 
-    return(
-      <img  src={pics.primaryImage.url} />
-    )
-  
-  })}
-  </div>
+      return(
+        <img  src={pics.primaryImage.url} />
+      )
+    
+    })}
+    </div>
+  <button onClick={moveRight}> right </button>
+  <iOutlineArrowLeft size={40} onClick={moveLeft}/> 
   <div>
-  {images.map((pics, index) => {
 
-    final.push(pics.primaryImage.url) 
-
-    return(
-      <img className='Pictures' src={pics.primaryImage.url} />
-    )
-  
-  })}
   </div>
     </div>
   );
