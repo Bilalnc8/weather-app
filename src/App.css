@@ -26,6 +26,12 @@
 
 }
 
+.posterPic {
+  width: 100%;
+  -webkit-filter: contrast(1.25);
+  filter: contrast(1.25);
+}
+
 .result:-webkit-scrollbar {
   display: none;
 }
@@ -54,4 +60,14 @@ button {
 
 img{
   object-fit: cover;
+  
+
 }
+
+.overlay {
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  image-rendering: pixelated
+} 

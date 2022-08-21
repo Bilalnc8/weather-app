@@ -71,7 +71,8 @@ const calls = () => {
   return (
     <div className="App">
 
-  <img src={`${url}${coverPicture}`} />
+  <img  className='posterPic' src={`${url}${coverPicture}`} />
+  <img class="overlay" src={`${url}${coverPicture}`}/>
   
      
   <MdChevronLeft size={40} onClick={moveLeft} className='leftButton'/> 
