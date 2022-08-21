@@ -38,6 +38,12 @@
   background-color: blue;
 }
 
+.RightButton{
+  padding: 129px 20px 129px 20px;
+  border: 1px solid red;
+  background-color: blue;
+}
+
 .icons:hover {
   background-color: grey;
 }

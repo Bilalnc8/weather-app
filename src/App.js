@@ -5,7 +5,7 @@ import 'remixicon/fonts/remixicon.css'
 import axios from 'axios';
 import { useState, useEffect, useTable } from 'react';
 import {AiFillCaretLeft} from "react-icons/ai";
-import {MdChevronLeft} from "react-icons/md"; 
+import {MdChevronLeft, MdChevronRight} from "react-icons/md"; 
 
 
 
@@ -89,8 +89,8 @@ const calls = () => {
     
     })}
     </div>
-  <button onClick={moveRight}> right </button>
-  <iOutlineArrowLeft size={40} onClick={moveLeft}/> 
+
+  <MdChevronRight size={40} onClick={moveRight} className='RightButton'/> 
   <div>
 
   <img  src='https://image.tmdb.org/t/p/w200/8cXbitsS6dWQ5gfMTZdorpAAzEH.jpg' />
