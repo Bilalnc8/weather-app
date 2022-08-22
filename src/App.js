@@ -45,7 +45,7 @@ const calls = () => {
         //await(response)
     .then(response => {
       console.log(response.data.results)
-      setCoverPicture(response.data.results[randomNumber].backdrop_path)
+      setCoverPicture(response.data.results[randomNumber])
       
     })
     .catch(err => {
@@ -70,9 +70,24 @@ const calls = () => {
 
   return (
     <div className="App">
+  <header className='coverPicture' 
+  style={{
+  backgroundPosition: "center center",
+  backgroundImage: `url("https://image.tmdb.org/t/p/original/${coverPicture.backdrop_path}")`,
+  backgroundSize: 'cover',
+}}> 
+   
+  <div className='coverInfo'> 
+    <h1> {coverPicture.title} </h1>
+    <button> Play </button>
+    <button> Add to my list </button>
+    <p> {coverPicture.overview} </p>
+  </div>
 
-  <img  className='posterPic' src={`${url}${coverPicture}`} />
-  <img class="overlay" src={`${url}${coverPicture}`}/>
+    
+  
+  </header>
+    
   
      
   <MdChevronLeft size={40} onClick={moveLeft} className='leftButton'/> 
