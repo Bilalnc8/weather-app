@@ -86,4 +86,6 @@ h1 {
 }
 p{
   background-color: transparent;
+  word-wrap: break-word;
+  width: 400px;
 }

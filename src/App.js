@@ -76,6 +76,14 @@ const calls = () => {
 
   return (
     <div className="App">
+
+   <div className='navBar'>
+   <button> Search </button>
+   <button> Logout </button>  
+   
+   </div> 
+
+
   <header className='coverPicture' 
   style={{
   backgroundPosition: "center center",
