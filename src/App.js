@@ -18,7 +18,7 @@ function App() {
   const [final, setFinal] = useState([])
   const url = 'https://image.tmdb.org/t/p/w200'
   const [coverPicture, setCoverPicture] = useState([]) 
-
+  const [showSlider, setShowSlider] = useState(false)
   
   
 
@@ -68,6 +68,12 @@ const calls = () => {
     calls();
   }, []);
 
+
+  const onSlider = (event, downOrLeave) => {
+    downOrLeave ? setShowSlider(true): setShowSlider(false)
+
+  }
+
   return (
     <div className="App">
   <header className='coverPicture' 
@@ -90,8 +96,8 @@ const calls = () => {
     
   
      
-  <MdChevronLeft size={40} onClick={moveLeft} className='leftButton'/> 
-  <div  id='slider' className='result'>
+  <MdChevronLeft size={40} onClick={moveLeft} className='leftButton' style={{visibility: showSlider ? 'visible': 'hidden'}}/> 
+  <div  onMouseEnter={event => onSlider(event, true)}  onMouseLeave={event => onSlider(event, false)} id='slider' className='result' >
 
   
    
@@ -106,12 +112,14 @@ const calls = () => {
     })}
     </div>
 
-  <MdChevronRight size={40} onClick={moveRight} className='RightButton'/> 
+  <MdChevronRight size={40} onClick={moveRight} className='RightButton' style={{visibility: showSlider ? 'visible': 'hidden'}}/> 
   <div>
 
   <img  src='https://image.tmdb.org/t/p/w200/8cXbitsS6dWQ5gfMTZdorpAAzEH.jpg' />
 
   </div>
+
+  
     </div>
   );
 }
