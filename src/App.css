@@ -37,8 +37,8 @@
 }
 
 .leftButton{
-  position: relative;
-  top: 303px;
+  position: absolute;
+  top: 641.5px;
   padding: 129px 20px 129px 20px;
   border: 1px solid red;
   background-color: blue;
@@ -47,6 +47,11 @@
 
 .RightButton{
   padding: 129px 20px 129px 20px;
+  border: 1px solid red;
+  background-color: blue;
+  position: absolute;
+  top: 641.5px;
+  right: 0px;
   border: 1px solid red;
   background-color: blue;
 }

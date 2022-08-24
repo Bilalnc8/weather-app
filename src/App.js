@@ -78,9 +78,9 @@ const calls = () => {
     <div className="App">
 
    <div className='navBar'>
+    NetFlix
    <button> Search </button>
    <button> Logout </button>  
-   
    </div> 
 
 
@@ -103,9 +103,9 @@ const calls = () => {
   </header>
     
   
-     
+   <div onMouseEnter={event => onSlider(event, true)}  onMouseLeave={event => onSlider(event, false)}>  
   <MdChevronLeft size={40} onClick={moveLeft} className='leftButton' style={{visibility: showSlider ? 'visible': 'hidden'}}/> 
-  <div  onMouseEnter={event => onSlider(event, true)}  onMouseLeave={event => onSlider(event, false)} id='slider' className='result' >
+  <div id='slider' className='result' >
 
   
    
@@ -120,7 +120,8 @@ const calls = () => {
     })}
     </div>
 
-  <MdChevronRight size={40} onClick={moveRight} className='RightButton' style={{visibility: showSlider ? 'visible': 'hidden'}}/> 
+  <MdChevronRight size={40} onClick={moveRight} className='RightButton' style={{visibility: showSlider ? 'visible': 'hidden'}}/>
+  </div> 
   <div>
 
   <img  src='https://image.tmdb.org/t/p/w200/8cXbitsS6dWQ5gfMTZdorpAAzEH.jpg' />
